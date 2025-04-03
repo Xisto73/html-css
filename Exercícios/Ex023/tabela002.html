@@ -9,9 +9,27 @@
         font-family: Arial, Helvetica, sans-serif;
 
     }
+
+    tbody > tr:nth-child(odd) { /* Outra forma -> 2n-1 */
+        background-color: white;
+    }
+
+    tbody > tr:nth-child(even) { /* Outra forma -> 2n */
+        background-color: lightgray;
+    }
+
     table {
         width: 500px;
         border-collapse: collapse;
+        position: relative;
+    }
+
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+
     }
 
     th, td {
@@ -21,9 +39,16 @@
         
     }
 
+    thead > tr > th {
+        position: sticky;
+        top: -1px;
+        background-color: gray;
+    }
+
     thead {
         background-color: gray;
         color: white;
+        
     }
 
     tfoot {
@@ -44,6 +69,7 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -53,10 +79,11 @@
     -->
 
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>Federação</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">Federação</th>
             </tr>
         </thead>
         <tbody>
@@ -171,10 +198,16 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>212.583.750</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad dolore fugiat accusantium iure, nemo quia ipsam saepe minima repellat culpa, architecto commodi asperiores voluptas perspiciatis facere sequi, maiores quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus mollitia nulla nobis pariatur nihil, animi culpa explicabo in asperiores sed. Architecto expedita, aspernatur quasi deleniti quis quaerat iste illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore saepe, illum ex sapiente quasi molestias commodi labore debitis sint, facilis cupiditate, animi laborum ipsum rerum libero voluptate minima dolorem excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ratione neque, maxime rerum libero dicta, laboriosam facere commodi vitae, eius perferendis veniam quam incidunt quod aliquam reiciendis sunt pariatur voluptatum?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad dolore fugiat accusantium iure, nemo quia ipsam saepe minima repellat culpa, architecto commodi asperiores voluptas perspiciatis facere sequi, maiores quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus mollitia nulla nobis pariatur nihil, animi culpa explicabo in asperiores sed. Architecto expedita, aspernatur quasi deleniti quis quaerat iste illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore saepe, illum ex sapiente quasi molestias commodi labore debitis sint, facilis cupiditate, animi laborum ipsum rerum libero voluptate minima dolorem excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ratione neque, maxime rerum libero dicta, laboriosam facere commodi vitae, eius perferendis veniam quam incidunt quod aliquam reiciendis sunt pariatur voluptatum?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ad dolore fugiat accusantium iure, nemo quia ipsam saepe minima repellat culpa, architecto commodi asperiores voluptas perspiciatis facere sequi, maiores quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus mollitia nulla nobis pariatur nihil, animi culpa explicabo in asperiores sed. Architecto expedita, aspernatur quasi deleniti quis quaerat iste illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore saepe, illum ex sapiente quasi molestias commodi labore debitis sint, facilis cupiditate, animi laborum ipsum rerum libero voluptate minima dolorem excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure ratione neque, maxime rerum libero dicta, laboriosam facere commodi vitae, eius perferendis veniam quam incidunt quod aliquam reiciendis sunt pariatur voluptatum?
+    </p>
 </body>
 </html>
